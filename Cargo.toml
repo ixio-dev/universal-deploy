@@ -1,0 +1,16 @@
+[package]
+name = "universal-deploy"
+version = "0.7.0"
+edition = "2021"
+
+[[bin]]
+name = "ud"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+clap_complete = "4.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
+git2 = { version = "0.18", default-features = false, features = ["ssh", "https"] }
+uuid = { version = "1.0", features = ["v4"] }
